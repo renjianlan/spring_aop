@@ -26,7 +26,7 @@ public class MyInvocationHandler implements InvocationHandler {
      */
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println(method.getName()+"方法的参数是"+ Arrays.toString(args));
-        //委托对象调用方法
+        //委托对象执行真正的业务方法，反射机制可以理解为方法调对象
         Object result=method.invoke(this.object,args);
         System.out.println(method.getName()+"的结果是"+result);
         return result;

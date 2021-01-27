@@ -15,7 +15,7 @@ public class Test1 {
         MyInvocationHandler myInvocationHandler=new MyInvocationHandler();
         //将委托对象传入生成代理对象，代理对象具备委托对象所有的功能
         Cal cal1= (Cal) myInvocationHandler.bind(cal);
-        //代理对象调用invoke方法，cal1是第一个参数、add是第二个参数、1和1是第三个参数
+        //代理对象执行每个方法的时候进入invoke方法，cal1是第一个参数、add是第二个参数、1和1是第三个参数
         cal1.add(1,1);
         cal1.sub(2,1);
         cal1.mul(2,3);
