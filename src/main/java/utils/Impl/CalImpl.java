@@ -1,7 +1,9 @@
 package utils.Impl;
 
+import org.springframework.stereotype.Component;
 import utils.Cal;
 
+@Component
 public class CalImpl implements Cal {
     public int add(int num1, int num2) {
         //System.out.println("add方法的参数是["+num1+","+num2+"]");
